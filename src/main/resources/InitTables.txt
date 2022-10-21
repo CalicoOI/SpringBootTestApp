@@ -1,0 +1,28 @@
+CREATE TABLE dbcompany.Project (
+    ProjectID INT AUTO_INCREMENT PRIMARY KEY,
+    PrjName VARCHAR(255) NOT NULL,
+    PrjCustomer VARCHAR(255) NOT NULL,
+    PrjDescription VARCHAR(255)
+);
+
+CREATE TABLE dbcompany.Employee (
+    EmployeeID int AUTO_INCREMENT PRIMARY KEY,
+    ProjectID int,
+    FirstName VARCHAR(40) NOT NULL,
+    Lastname VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) NOT NULL,
+
+    FOREIGN KEY (ProjectID) REFERENCES Project(ProjectID)
+)
+
+INSERT INTO dbcompany.project (PrjName, PrjCustomer, PrjDescription) VALUES
+	('FirstProject', 'Some richy suctomer', 'Another marketplace'),
+	('SecondProject', 'Chineese goverment', 'big brother spy tool');
+
+INSERT INTO dbcompany.employee (ProjectID, FirstName, Lastname, Email) VALUES
+	(1, 'Gleb', 'Smirnov', 'gs@mail.com'),
+	(1, 'John', 'Doe', 'jd@mail.com'),
+	(1, 'Joana', 'Doe', 'jod@mail.com'),
+	(2, 'Ozzy', 'Osbourne', 'oz@mail.com'),
+	(2, 'John', 'Mayal', 'jm@mail.com'),
+	(2, 'Pink', 'Andersen', 'ps@mail.com');
