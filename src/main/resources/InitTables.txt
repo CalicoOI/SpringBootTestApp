@@ -7,7 +7,7 @@ CREATE TABLE dbcompany.Project (
 
 CREATE TABLE dbcompany.Employee (
     EmployeeID int AUTO_INCREMENT PRIMARY KEY,
-    ProjectID int,
+    ProjectID int NULL,
     FirstName VARCHAR(40) NOT NULL,
     Lastname VARCHAR(255) NOT NULL,
     Email VARCHAR(255) NOT NULL,

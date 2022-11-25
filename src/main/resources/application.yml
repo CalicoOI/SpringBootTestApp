@@ -4,3 +4,5 @@ spring:
     url: jdbc:mysql://${SPRING_JDBC_HOST:localhost}:${SPRING_JDBC_PORT:3306}/dbcompany?createDatabaseIfNotExist=true&autoReconnect=true&serverTimezone=UTC
     username: root
     password: 6316
+  main:
+    banner-mode: "off"
